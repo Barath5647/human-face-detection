@@ -1,5 +1,5 @@
 import sys
-sys.path.append('src/preprocessing')  # Add this line
+sys.path.append('src')  # Add this line
 
 from preprocessing.validate import validate_dataset
 from preprocessing.preprocess import preprocess_data
