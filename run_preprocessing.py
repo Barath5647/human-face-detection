@@ -1,9 +1,17 @@
 import sys
+import os
 sys.path.append('src')  # Add this line
 
 from preprocessing.validate import validate_dataset
 from preprocessing.preprocess import preprocess_data
 from preprocessing.convert_yolo import convert_to_yolo
+
+def convert_to_yolo(processed_dir, output_dir):
+    # Create directories if they don't exist
+    os.makedirs(os.path.join(output_dir, 'images'), exist_ok=True)
+    os.makedirs(os.path.join(output_dir, 'labels'), exist_ok=True)
+    
+    # Rest of your conversion code
 
 if __name__ == "__main__":
     raw_dir = "data/raw"
